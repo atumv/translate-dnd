@@ -20,11 +20,11 @@ const StyledCheckBtn = styled.button`
   }
 `;
 
-type CheckProps = {
+type CheckBtnProps = {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const CheckBtn = ({ onClick }: CheckProps) => (
+const CheckBtn = ({ onClick }: CheckBtnProps) => (
   <StyledCheckBtn onClick={onClick}>Проверить</StyledCheckBtn>
 );
 

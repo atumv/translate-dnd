@@ -26,23 +26,16 @@ const StyledWord = styled.span`
   font-weight: 400;
   box-shadow: 0px 2px 1px #d1d147;
   animation: 1s ${slideInRightAnimation};
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:active {
-    background: #fdfd31;
-  }
+  cursor: pointer;
 `;
 
 type WordProps = {
-  id: string;
-  draggable: boolean;
-  children: React.ReactNode;
   onDragStart: (e: React.DragEvent<HTMLElement>) => void;
   onDragOver: (e: React.DragEvent<HTMLElement>) => void;
   onDrop: (e: React.DragEvent<HTMLElement>) => void;
+  draggable: boolean;
+  id: string;
+  children: React.ReactNode;
 };
 
 const Word = ({ onDragStart, onDragOver, onDrop, draggable, id, children }: WordProps) => (

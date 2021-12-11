@@ -16,15 +16,13 @@ const StyledListItem = styled.li`
 const StyledWord = styled.span`
   list-style-type: none;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   min-width: 75px;
   min-height: 40px;
   border-radius: 50px;
   background: #ffff35;
   box-shadow: 0px 2px 1px #d1d147;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.1s linear;
-  transition: all 1s linear;
   animation: 1s ${fadeInAnimation};
 
   &:hover {

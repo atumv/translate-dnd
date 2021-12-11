@@ -12,8 +12,8 @@ type ListenBtnProps = {
   onClick: () => void;
 };
 
-const ListenBtn = (props: ListenBtnProps) => (
-  <StyledListenBtn onClick={props.onClick}>📢</StyledListenBtn>
+const ListenBtn = ({ onClick }: ListenBtnProps) => (
+  <StyledListenBtn onClick={onClick}>📢</StyledListenBtn>
 );
 
 export default ListenBtn;

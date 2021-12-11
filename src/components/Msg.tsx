@@ -18,8 +18,8 @@ type MsgProps = {
   children: React.ReactNode;
 };
 
-const Msg = (props: MsgProps) => (
-  <StyledMsg color={props.color}>{props.children}</StyledMsg>
+const Msg = ({ color, children }: MsgProps) => (
+  <StyledMsg color={color}>{children}</StyledMsg>
 );
 
 export default Msg;

@@ -45,15 +45,15 @@ type WordProps = {
   onDrop: (e: React.DragEvent<HTMLElement>) => void;
 };
 
-const Word = (props: WordProps) => (
+const Word = ({ onDragStart, onDragOver, onDrop, draggable, id, children }: WordProps) => (
   <StyledListItem
-    onDragStart={props.onDragStart}
-    onDragOver={props.onDragOver}
-    onDrop={props.onDrop}
-    className={`_${props.id}`}
+    onDragStart={onDragStart}
+    onDragOver={onDragOver}
+    onDrop={onDrop}
+    className={`_${id}`}
   >
-    <StyledWord draggable={props.draggable} id={props.id} className="word">
-      {props.children}
+    <StyledWord draggable={draggable} id={id} className="word">
+      {children}
     </StyledWord>
   </StyledListItem>
 );

@@ -17,9 +17,9 @@ type WordListProps = {
   children: React.ReactNode;
 };
 
-const WordList = (props: WordListProps) => (
-  <StyledWordList onDragOver={props.onDragOver} onDrop={props.onDrop}>
-    {props.children}
+const WordList = ({ onDragOver, onDrop, children }: WordListProps) => (
+  <StyledWordList onDragOver={onDragOver} onDrop={onDrop}>
+    {children}
   </StyledWordList>
 );
 

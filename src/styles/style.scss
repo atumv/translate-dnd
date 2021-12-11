@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+#root {
+  padding: 1rem 0;
+}
+
 .page {
   overflow-y: scroll;
   font-family: "Roboto", "Open Sans", "Noto Sans", "Arial", "Tahoma", "Verdana", sans-serif;

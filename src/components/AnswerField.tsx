@@ -20,6 +20,7 @@ type AnswerFieldProps = {
 
 const AnswerField = ({ onDragStart, onDragOver, onDrop }: AnswerFieldProps) => (
   <StyledAnswerField
+    className="answer-field"
     onDragStart={onDragStart}
     onDragOver={onDragOver}
     onDrop={onDrop}

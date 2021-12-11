@@ -44,7 +44,7 @@ const App = () => {
     e.preventDefault();
     const data = e.dataTransfer.getData("text");
 
-    if (e.target.nodeName == "UL") {
+    if (e.target.classList.contains('word-list')) {
       const emptyLi = e.target.querySelector("li:empty");
       emptyLi.append(document.getElementById(data));
 
@@ -56,7 +56,8 @@ const App = () => {
           sameClassLi.append(emptyLi.children[0]);
         }
       }, 1000);
-    } else if (e.target.nodeName == "LI") {
+      
+    } else if (e.target.classList.contains('list-item')) {
       e.target.append(document.getElementById(data));
 
       setTimeout(() => {
@@ -67,7 +68,8 @@ const App = () => {
           sameClassLi.append(e.target.children[0]);
         }
       }, 1000);
-    } else if (e.target.nodeName == "DIV") {
+      
+    } else if (e.target.classList.contains('answer-field')) {
       e.target.append(document.getElementById(data));
     }
 
@@ -119,9 +121,7 @@ const App = () => {
 
       <CheckBtn onClick={checkAnswer} />
 
-      {isCorrect === undefined && (
-        <Msg color="transparent">Составьте перевод</Msg>
-      )}
+      {isCorrect === undefined && <Msg color="transparent">&nbsp;</Msg>}
       {isCorrect === true && <Msg color="#2d962d">Правильно ✔️</Msg>}
       {isCorrect === false && <Msg color="#8d120e">Неверно ✖️</Msg>}
     </StyledApp>

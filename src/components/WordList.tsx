@@ -18,7 +18,7 @@ type WordListProps = {
 };
 
 const WordList = ({ onDragOver, onDrop, children }: WordListProps) => (
-  <StyledWordList onDragOver={onDragOver} onDrop={onDrop}>
+  <StyledWordList className="word-list" onDragOver={onDragOver} onDrop={onDrop}>
     {children}
   </StyledWordList>
 );

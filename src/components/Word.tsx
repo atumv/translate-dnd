@@ -47,12 +47,12 @@ const Word = ({
   children,
 }: WordProps) => (
   <StyledListItem
+    className={`_${id} list-item`}
     onDragStart={onDragStart}
     onDragOver={onDragOver}
     onDrop={onDrop}
-    className={`_${id}`}
   >
-    <StyledWord draggable={draggable} id={id} className="word">
+    <StyledWord className="word" id={id} draggable={draggable}>
       {children}
     </StyledWord>
   </StyledListItem>

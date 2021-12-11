@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
-import Phrase from './components/Phrase';
-import ListenBtn from './components/ListenBtn';
-import AnswerField from './components/AnswerField';
-import WordList from './components/WordList';
-import Word from './components/Word';
-import CheckBtn from './components/CheckBtn';
-import Msg from './components/Msg';
+import Phrase from "./components/Phrase";
+import ListenBtn from "./components/ListenBtn";
+import AnswerField from "./components/AnswerField";
+import WordList from "./components/WordList";
+import Word from "./components/Word";
+import CheckBtn from "./components/CheckBtn";
+import Msg from "./components/Msg";
 
-import './styles/style.scss';
+import "./styles/style.scss";
 
 const StyledApp = styled.div`
   display: flex;
@@ -20,32 +20,32 @@ const StyledApp = styled.div`
 `;
 
 const App = () => {
-  const [phrase] = useState('У моего дяди есть ферма в деревне');
-  const [translation] = useState('My uncle has a farm in the village');
-  const [answer, setAnswer] = useState<string>('');
-  const [correctAnswer] = useState('myunclehasafarminthevillage');
+  const [phrase] = useState("У моего дяди есть ферма в деревне");
+  const [translation] = useState("My uncle has a farm in the village");
+  const [answer, setAnswer] = useState<string>("");
+  const [correctAnswer] = useState("myunclehasafarminthevillage");
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
   const [words] = useState([
-    'a',
-    'farm',
-    'has',
-    'in',
-    'my',
-    'the',
-    'uncle',
-    'village',
+    "a",
+    "farm",
+    "has",
+    "in",
+    "my",
+    "the",
+    "uncle",
+    "village",
   ]);
 
   const drag = (e: any): void => {
-    e.dataTransfer.setData('text', e.target.id);
+    e.dataTransfer.setData("text", e.target.id);
   };
 
   const drop = (e: any): void => {
     e.preventDefault();
-    const data = e.dataTransfer.getData('text');
+    const data = e.dataTransfer.getData("text");
 
-    if (e.target.nodeName == 'UL') {
-      const emptyLi = e.target.querySelector('li:empty');
+    if (e.target.nodeName == "UL") {
+      const emptyLi = e.target.querySelector("li:empty");
       emptyLi.append(document.getElementById(data));
 
       setTimeout(() => {
@@ -56,7 +56,7 @@ const App = () => {
           sameClassLi.append(emptyLi.children[0]);
         }
       }, 1000);
-    } else if (e.target.nodeName == 'LI') {
+    } else if (e.target.nodeName == "LI") {
       e.target.append(document.getElementById(data));
 
       setTimeout(() => {
@@ -67,7 +67,7 @@ const App = () => {
           sameClassLi.append(e.target.children[0]);
         }
       }, 1000);
-    } else if (e.target.nodeName == 'DIV') {
+    } else if (e.target.nodeName == "DIV") {
       e.target.append(document.getElementById(data));
     }
 
@@ -76,7 +76,7 @@ const App = () => {
   };
 
   const allowDrop = (e: any): void => {
-    if (!e.target.classList.contains('word')) {
+    if (!e.target.classList.contains("word")) {
       e.preventDefault();
     }
   };

@@ -38,7 +38,14 @@ type WordProps = {
   children: React.ReactNode;
 };
 
-const Word = ({ onDragStart, onDragOver, onDrop, draggable, id, children }: WordProps) => (
+const Word = ({
+  onDragStart,
+  onDragOver,
+  onDrop,
+  draggable,
+  id,
+  children,
+}: WordProps) => (
   <StyledListItem
     onDragStart={onDragStart}
     onDragOver={onDragOver}

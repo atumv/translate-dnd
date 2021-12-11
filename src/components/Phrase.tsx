@@ -11,7 +11,7 @@ const Phrase = styled.h1`
   }
 
   @media (max-width: 320px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 

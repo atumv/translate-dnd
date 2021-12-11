@@ -22,6 +22,8 @@ const StyledWord = styled.span`
   min-height: 40px;
   border-radius: 50px;
   background: #ffff35;
+  font-family: "Roboto";
+  font-weight: 400;
   box-shadow: 0px 2px 1px #d1d147;
   animation: 1s ${slideInRightAnimation};
 

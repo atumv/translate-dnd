@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { slideInDown } from "react-animations";
+import { slideInRight } from "react-animations";
 
-const fadeInAnimation = keyframes`${slideInDown}`;
+const slideInRightAnimation = keyframes`${slideInRight}`;
 
 const StyledListItem = styled.li`
   list-style-type: none;
@@ -23,7 +23,7 @@ const StyledWord = styled.span`
   border-radius: 50px;
   background: #ffff35;
   box-shadow: 0px 2px 1px #d1d147;
-  animation: 1s ${fadeInAnimation};
+  animation: 1s ${slideInRightAnimation};
 
   &:hover {
     cursor: pointer;

@@ -2,6 +2,8 @@
 
 Small drag and drop translate application built with React & TypeScript.
 
+You can see the live demo [here](https://atumv.github.io/translate-dnd).
+
 ## Libraries used
 
 - [`react`](https://www.npmjs.com/package/react)

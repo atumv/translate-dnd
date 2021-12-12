@@ -5,6 +5,7 @@ import Phrase from "./components/Phrase";
 import ListenBtn from "./components/ListenBtn";
 import AnswerField from "./components/AnswerField";
 import WordList from "./components/WordList";
+import ListItem from "./components/ListItem";
 import Word from "./components/Word";
 import CheckBtn from "./components/CheckBtn";
 import Msg from "./components/Msg";
@@ -23,7 +24,9 @@ const App = () => {
   const [phrase, setPhrase] = useState<string | undefined>(undefined);
   const [translation, setTranslation] = useState<string | undefined>(undefined);
   const [answer, setAnswer] = useState<string | undefined>(undefined);
-  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(undefined);
+  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(
+    undefined
+  );
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
   const [words, setWords] = useState<Array<string> | []>([]);
 
@@ -118,16 +121,15 @@ const App = () => {
       {phrase && (
         <WordList onDragOver={allowDrop} onDrop={drop}>
           {words.map((word, i) => (
-            <Word
+            <ListItem
               onDragStart={drag}
               onDragOver={allowDrop}
               onDrop={drop}
-              draggable={true}
               id={i.toString()}
               key={i.toString()}
             >
-              {word}
-            </Word>
+              <Word id={i.toString()} draggable={true}>{word}</Word>
+            </ListItem>
           ))}
         </WordList>
       )}

@@ -4,16 +4,6 @@ import { slideInRight } from "react-animations";
 
 const slideInRightAnimation = keyframes`${slideInRight}`;
 
-const StyledListItem = styled.li`
-  list-style-type: none;
-  display: inline-block;
-  width: 75px;
-  height: 40px;
-  border-radius: 50px;
-  background: #f3f3f3;
-  margin: 0.4rem;
-`;
-
 const StyledWord = styled.span`
   list-style-type: none;
   display: inline-flex;
@@ -25,38 +15,21 @@ const StyledWord = styled.span`
   background: #ffff35;
   font-family: "Roboto";
   font-weight: 400;
+  cursor: pointer;
   box-shadow: 0px 2px 1px #d1d147;
   animation: 1s ${slideInRightAnimation};
-  cursor: pointer;
 `;
 
 type WordProps = {
-  onDragStart: (e: React.DragEvent<HTMLSpanElement>) => void;
-  onDragOver: (e: React.DragEvent<HTMLSpanElement>) => void;
-  onDrop: (e: React.DragEvent<HTMLSpanElement>) => void;
-  draggable: boolean;
   id: string;
+  draggable: boolean;
   children: React.ReactNode;
 };
 
-const Word = ({
-  onDragStart,
-  onDragOver,
-  onDrop,
-  draggable,
-  id,
-  children,
-}: WordProps) => (
-  <StyledListItem
-    className={`_${id} list-item`}
-    onDragStart={onDragStart}
-    onDragOver={onDragOver}
-    onDrop={onDrop}
-  >
-    <StyledWord className="word" id={id} draggable={draggable}>
-      {children}
-    </StyledWord>
-  </StyledListItem>
+const Word = ({ id, draggable, children }: WordProps) => (
+  <StyledWord className="word" id={id} draggable={draggable}>
+    {children}
+  </StyledWord>
 );
 
 export default Word;

@@ -68,7 +68,8 @@ object-assign
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 11rem;
+  max-width: 600px;
+  padding: 0 2rem;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
 }

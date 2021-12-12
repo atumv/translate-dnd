@@ -8,7 +8,7 @@ const StyledWordList = styled.ul`
   flex-wrap: wrap;
   width: 100%;
   max-width: 600px;
-  padding: 0 2rem;
+  padding: 0 3rem;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
 }

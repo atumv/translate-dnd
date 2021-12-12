@@ -24,9 +24,7 @@ const App = () => {
   const [phrase, setPhrase] = useState<string | undefined>(undefined);
   const [translation, setTranslation] = useState<string | undefined>(undefined);
   const [answer, setAnswer] = useState<string | undefined>(undefined);
-  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(
-    undefined
-  );
+  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(undefined);
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
   const [words, setWords] = useState<Array<string> | []>([]);
 

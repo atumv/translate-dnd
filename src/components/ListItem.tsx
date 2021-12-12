@@ -20,10 +20,10 @@ type ListItemProps = {
 };
 
 const ListItem = ({
+  id,
   onDragStart,
   onDragOver,
   onDrop,
-  id,
   children,
 }: ListItemProps) => (
   <StyledListItem

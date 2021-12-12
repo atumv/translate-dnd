@@ -6,9 +6,11 @@ const StyledWordList = styled.ul`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 125px;
   width: 100%;
-  max-width: 440px;
+  padding: 0 11rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
 `;
 
 type WordListProps = {

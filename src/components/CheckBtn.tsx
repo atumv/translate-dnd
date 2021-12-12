@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const StyledCheckBtn = styled.button`
   padding: 1rem 4rem;
-  margin-top: 3rem;
   border: 1px solid #f3f3f3;
   border-radius: 50px;
   background-color: #ffffff;

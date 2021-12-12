@@ -11,6 +11,7 @@ const StyledListItem = styled.li`
   height: 40px;
   border-radius: 50px;
   background: #f3f3f3;
+  margin: 0.4rem;
 `;
 
 const StyledWord = styled.span`

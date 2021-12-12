@@ -9,7 +9,7 @@ const StyledAnswerField = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
 `;
 
 type AnswerFieldProps = {

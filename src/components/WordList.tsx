@@ -11,7 +11,6 @@ const StyledWordList = styled.ul`
   padding: 0 3rem;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
-}
 `;
 
 type WordListProps = {

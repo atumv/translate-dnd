@@ -24,7 +24,7 @@ const AnswerField = ({ onDragStart, onDragOver, onDrop }: AnswerFieldProps) => (
     onDragStart={onDragStart}
     onDragOver={onDragOver}
     onDrop={onDrop}
-  ></StyledAnswerField>
+  />
 );
 
 export default AnswerField;

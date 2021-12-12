@@ -22,7 +22,7 @@ You can see the live demo [here](https://atumv.github.io/translate-dnd).
 Then you can start the app with `npm run start`.
 Server is running at http://localhost:9000/.
 
-## One line to go:
+## One line to go
 
 ```
 git clone https://github.com/atumv/translate-dnd.git && cd translate-dnd && npm i && npm run start

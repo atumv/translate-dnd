@@ -84,7 +84,9 @@ const App = () => {
   };
 
   const say = (text: string): void => {
-    speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    speechSynthesis.speak(utterance);
   };
   
   const playTranslation = () => {

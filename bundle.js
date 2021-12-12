@@ -61,15 +61,17 @@ object-assign
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
 `,Ie=({onDragStart:t,onDragOver:n,onDrop:r})=>e.createElement(Re,{className:"answer-field",onDragStart:t,onDragOver:n,onDrop:r}),Fe=Ne.ul`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 125px;
   width: 100%;
-  max-width: 440px;
+  padding: 0 11rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
 `,De=({onDragOver:t,onDrop:n,children:r})=>e.createElement(Fe,{className:"word-list",onDragOver:t,onDrop:n},r);var $e=n(2008);const Ue=ze`${$e.$k}`,Be=Ne.li`
   list-style-type: none;
   display: inline-block;
@@ -77,6 +79,7 @@ object-assign
   height: 40px;
   border-radius: 50px;
   background: #f3f3f3;
+  margin: 0.4rem;
 `,Ve=Ne.span`
   list-style-type: none;
   display: inline-flex;
@@ -93,7 +96,6 @@ object-assign
   cursor: pointer;
 `,We=({onDragStart:t,onDragOver:n,onDrop:r,draggable:a,id:o,children:l})=>e.createElement(Be,{className:`_${o} list-item`,onDragStart:t,onDragOver:n,onDrop:r},e.createElement(Ve,{className:"word",id:o,draggable:a},l)),He=Ne.button`
   padding: 1rem 4rem;
-  margin-top: 3rem;
   border: 1px solid #f3f3f3;
   border-radius: 50px;
   background-color: #ffffff;

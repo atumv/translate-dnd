@@ -30,9 +30,9 @@ const StyledWord = styled.span`
 `;
 
 type WordProps = {
-  onDragStart: (e: React.DragEvent<HTMLElement>) => void;
-  onDragOver: (e: React.DragEvent<HTMLElement>) => void;
-  onDrop: (e: React.DragEvent<HTMLElement>) => void;
+  onDragStart: (e: React.DragEvent<HTMLSpanElement>) => void;
+  onDragOver: (e: React.DragEvent<HTMLSpanElement>) => void;
+  onDrop: (e: React.DragEvent<HTMLSpanElement>) => void;
   draggable: boolean;
   id: string;
   children: React.ReactNode;

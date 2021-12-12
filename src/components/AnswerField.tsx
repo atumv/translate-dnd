@@ -13,9 +13,9 @@ const StyledAnswerField = styled.div`
 `;
 
 type AnswerFieldProps = {
-  onDragStart: (e: React.DragEvent<HTMLElement>) => void;
-  onDragOver: (e: React.DragEvent<HTMLElement>) => void;
-  onDrop: (e: React.DragEvent<HTMLElement>) => void;
+  onDragStart: (e: React.DragEvent<HTMLDivElement>) => void;
+  onDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
+  onDrop: (e: React.DragEvent<HTMLDivElement>) => void;
 };
 
 const AnswerField = ({ onDragStart, onDragOver, onDrop }: AnswerFieldProps) => (

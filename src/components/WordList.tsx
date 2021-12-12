@@ -12,8 +12,8 @@ const StyledWordList = styled.ul`
 `;
 
 type WordListProps = {
-  onDragOver: (e: React.DragEvent<HTMLElement>) => void;
-  onDrop: (e: React.DragEvent<HTMLElement>) => void;
+  onDragOver: (e: React.DragEvent<HTMLUListElement>) => void;
+  onDrop: (e: React.DragEvent<HTMLUListElement>) => void;
   children: React.ReactNode;
 };
 

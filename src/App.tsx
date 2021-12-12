@@ -53,26 +53,29 @@ const App = () => {
     if (e.target.classList.contains("word-list")) {
       const emptyLi = e.target.querySelector("li:empty");
       emptyLi.append(document.getElementById(data));
-
-      setTimeout(() => {
-        if (!emptyLi.classList.contains(emptyLi.children[0].id)) {
+      
+      if (!emptyLi.classList.contains(emptyLi.firstElementChild.id)) {
+        setTimeout(() => {        
           const sameClassLi = e.target.querySelector(
-            `li._${emptyLi.children[0].id}`
+            `li._${emptyLi.firstElementChild.id}`
           );
-          sameClassLi.append(emptyLi.children[0]);
-        }
-      }, 1000);
+          sameClassLi.append(emptyLi.firstElementChild);
+        }, 1000);
+      }
+      
     } else if (e.target.classList.contains("list-item")) {
       e.target.append(document.getElementById(data));
-
-      setTimeout(() => {
-        if (!e.target.classList.contains(e.target.children[0].id)) {
+      const word = e.target.querySelector(".word");
+      
+      if (!e.target.classList.contains(word.id)) {
+        setTimeout(() => {
           const sameClassLi = e.target.parentNode.querySelector(
-            `li._${e.target.children[0].id}`
+            `li._${word.id}`
           );
-          sameClassLi.append(e.target.children[0]);
-        }
-      }, 1000);
+          sameClassLi.append(word);
+        }, 1000);
+      }
+      
     } else if (e.target.classList.contains("answer-field")) {
       e.target.append(document.getElementById(data));
     }

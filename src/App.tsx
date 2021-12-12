@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import Phrase from "./components/Phrase";
@@ -20,21 +20,26 @@ const StyledApp = styled.div`
 `;
 
 const App = () => {
-  const [phrase] = useState("У моего дяди есть ферма в деревне");
-  const [translation] = useState("My uncle has a farm in the village");
-  const [answer, setAnswer] = useState<string>("");
-  const [correctAnswer] = useState("myunclehasafarminthevillage");
+  const [phrase, setPhrase] = useState<string | undefined>(undefined);
+  const [translation, setTranslation] = useState<string | undefined>(undefined);
+  const [answer, setAnswer] = useState<string | undefined>(undefined);
+  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(undefined);
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
-  const [words] = useState([
-    "a",
-    "farm",
-    "has",
-    "in",
-    "my",
-    "the",
-    "uncle",
-    "village",
-  ]);
+  const [words, setWords] = useState<Array<string> | []>([]);
+
+  const getPhrase = async (url: string) => {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    setPhrase(data.text);
+    setTranslation(data.translation);
+    setCorrectAnswer(data.correctAnswer);
+    setWords(data.words);
+  };
+
+  useEffect(() => {
+    getPhrase("http://localhost:3000/api/phrases/1");
+  }, []);
 
   const drag = (e: any): void => {
     e.dataTransfer.setData("text", e.target.id);
@@ -44,7 +49,7 @@ const App = () => {
     e.preventDefault();
     const data = e.dataTransfer.getData("text");
 
-    if (e.target.classList.contains('word-list')) {
+    if (e.target.classList.contains("word-list")) {
       const emptyLi = e.target.querySelector("li:empty");
       emptyLi.append(document.getElementById(data));
 
@@ -56,8 +61,7 @@ const App = () => {
           sameClassLi.append(emptyLi.children[0]);
         }
       }, 1000);
-      
-    } else if (e.target.classList.contains('list-item')) {
+    } else if (e.target.classList.contains("list-item")) {
       e.target.append(document.getElementById(data));
 
       setTimeout(() => {
@@ -68,8 +72,7 @@ const App = () => {
           sameClassLi.append(e.target.children[0]);
         }
       }, 1000);
-      
-    } else if (e.target.classList.contains('answer-field')) {
+    } else if (e.target.classList.contains("answer-field")) {
       e.target.append(document.getElementById(data));
     }
 
@@ -83,12 +86,12 @@ const App = () => {
     }
   };
 
-  const say = (text: string): void => {
+  const say = (text: string | undefined): void => {
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    utterance.lang = "en-US";
     speechSynthesis.speak(utterance);
   };
-  
+
   const playTranslation = () => {
     say(translation);
   };
@@ -104,28 +107,32 @@ const App = () => {
 
   return (
     <StyledApp>
-      <Phrase>{phrase}</Phrase>
+      {phrase && <Phrase>{phrase}</Phrase>}
 
-      <ListenBtn onClick={playTranslation} />
+      {translation && <ListenBtn onClick={playTranslation} />}
 
-      <AnswerField onDragStart={drag} onDragOver={allowDrop} onDrop={drop} />
+      {phrase && (
+        <AnswerField onDragStart={drag} onDragOver={allowDrop} onDrop={drop} />
+      )}
 
-      <WordList onDragOver={allowDrop} onDrop={drop}>
-        {words.map((word, i) => (
-          <Word
-            onDragStart={drag}
-            onDragOver={allowDrop}
-            onDrop={drop}
-            draggable={true}
-            id={i.toString()}
-            key={i.toString()}
-          >
-            {word}
-          </Word>
-        ))}
-      </WordList>
+      {phrase && (
+        <WordList onDragOver={allowDrop} onDrop={drop}>
+          {words.map((word, i) => (
+            <Word
+              onDragStart={drag}
+              onDragOver={allowDrop}
+              onDrop={drop}
+              draggable={true}
+              id={i.toString()}
+              key={i.toString()}
+            >
+              {word}
+            </Word>
+          ))}
+        </WordList>
+      )}
 
-      <CheckBtn onClick={checkAnswer} />
+      {phrase && <CheckBtn onClick={checkAnswer} />}
 
       {isCorrect === undefined && <Msg color="transparent">&nbsp;</Msg>}
       {isCorrect === true && <Msg color="#2d962d">Правильно ✔️</Msg>}

@@ -1,0 +1,11 @@
+{
+  "phrases": [
+    {
+      "id": 1,
+      "text": "У моего дяди есть ферма в деревне",
+      "translation": "My uncle has a farm in the village",
+      "correctAnswer": "myunclehasafarminthevillage",
+      "words": ["a", "farm", "has", "in", "my", "the", "uncle", "village"]
+    }
+  ]
+}

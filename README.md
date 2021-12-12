@@ -10,6 +10,7 @@ You can see the live demo [here](https://atumv.github.io/translate-dnd).
 - [`typescript`](https://www.npmjs.com/package/typescript)
 - [`styled-components`](https://www.npmjs.com/package/styled-components)
 - [`react-animations`](https://www.npmjs.com/package/react-animations)
+- [`json-server`](https://www.npmjs.com/package/json-server)
 - [`webpack`](https://www.npmjs.com/package/webpack)
 
 ## Installation and running
@@ -18,7 +19,5 @@ You can see the live demo [here](https://atumv.github.io/translate-dnd).
 2. Change directory: `cd translate-dnd`
 3. Install dependencies: `npm i`
 
-After that you can start development server with `npm run dev`.
-Server is running at http://localhost:3000/.
-
-To create production build use `npm run build`.
+Then you can start the app with `npm run start`.
+Server is running at http://localhost:9000/.

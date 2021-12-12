@@ -87,14 +87,14 @@ const App = () => {
     speechSynthesis.speak(new SpeechSynthesisUtterance(text));
   };
   
-  const sayTranslation = () => {
+  const playTranslation = () => {
     say(translation);
   };
 
   const checkAnswer = (): void => {
     if (answer === correctAnswer) {
       setIsCorrect(true);
-      sayTranslation();
+      playTranslation();
     } else {
       setIsCorrect(false);
     }
@@ -104,7 +104,7 @@ const App = () => {
     <StyledApp>
       <Phrase>{phrase}</Phrase>
 
-      <ListenBtn onClick={sayTranslation} />
+      <ListenBtn onClick={playTranslation} />
 
       <AnswerField onDragStart={drag} onDragOver={allowDrop} onDrop={drop} />
 

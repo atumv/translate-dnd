@@ -1,5 +1,5 @@
 import React from "react";
-import StyledMsg from "./styled";
+import StyledMsg from "../styles/StyledMsg";
 
 type MsgProps = {
   color: string;

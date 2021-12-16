@@ -1,5 +1,5 @@
 import React from "react";
-import StyledWord from "./styled";
+import StyledWord from "../styles/StyledWord";
 
 type WordProps = {
   id: string;

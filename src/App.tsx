@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import Phrase from "./components/Phrase/Phrase";
-import ListenBtn from "./components/ListenBtn/ListenBtn";
-import AnswerField from "./components/AnswerField/AnswerField";
-import WordList from "./components/WordList/WordList";
-import ListItem from "./components/ListItem/ListItem";
-import Word from "./components/Word/Word";
-import CheckBtn from "./components/CheckBtn/CheckBtn";
-import Msg from "./components/Msg/Msg";
+import Phrase from "./components/Phrase";
+import ListenBtn from "./components/ListenBtn";
+import AnswerField from "./components/AnswerField";
+import WordList from "./components/WordList";
+import ListItem from "./components/ListItem";
+import Word from "./components/Word";
+import CheckBtn from "./components/CheckBtn";
+import Msg from "./components/Msg";
 
-import StyledApp from "./styled";
-import "./styles/style.css";
+import GlobalStyles from "./styles/global";
+import StyledApp from "./styles/StyledApp";
 
 const App: React.FC = () => {
   const [phrase, setPhrase] = useState<string>("");
@@ -132,6 +132,8 @@ const App: React.FC = () => {
       {isCorrect === null && <Msg color="transparent">&nbsp;</Msg>}
       {isCorrect === true && <Msg color="#2d962d">Правильно ✔️</Msg>}
       {isCorrect === false && <Msg color="#8d120e">Неверно ✖️</Msg>}
+
+      <GlobalStyles />
     </StyledApp>
   );
 };

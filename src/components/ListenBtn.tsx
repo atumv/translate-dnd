@@ -1,5 +1,5 @@
 import React from "react";
-import StyledListenBtn from "./styled";
+import StyledListenBtn from "../styles/StyledListenBtn";
 
 type ListenBtnProps = {
   onClick: () => void;

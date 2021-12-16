@@ -1,5 +1,5 @@
 import React from "react";
-import StyledListItem from "./styled";
+import StyledListItem from "../styles/StyledListItem";
 
 type ListItemProps = {
   onDragStart: (e: React.DragEvent<HTMLSpanElement>) => void;

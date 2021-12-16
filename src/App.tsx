@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 
-import Phrase from "./components/Phrase";
-import ListenBtn from "./components/ListenBtn";
-import AnswerField from "./components/AnswerField";
-import WordList from "./components/WordList";
-import ListItem from "./components/ListItem";
-import Word from "./components/Word";
-import CheckBtn from "./components/CheckBtn";
-import Msg from "./components/Msg";
+import Phrase from "./components/Phrase/Phrase";
+import ListenBtn from "./components/ListenBtn/ListenBtn";
+import AnswerField from "./components/AnswerField/AnswerField";
+import WordList from "./components/WordList/WordList";
+import ListItem from "./components/ListItem/ListItem";
+import Word from "./components/Word/Word";
+import CheckBtn from "./components/CheckBtn/CheckBtn";
+import Msg from "./components/Msg/Msg";
 
-import "./styles/style.scss";
-
-const StyledApp = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-`;
+import StyledApp from "./styled";
+import "./styles/style.css";
 
 const App:React.FC = () => {
   const [phrase, setPhrase] = useState<string>("");
@@ -81,7 +73,7 @@ const App:React.FC = () => {
     }
 
     setAnswer(e.target.textContent);
-    setIsCorrect(undefined);
+    setIsCorrect(null);
   };
 
   const allowDrop = (e: any): void => {
@@ -90,7 +82,7 @@ const App:React.FC = () => {
     }
   };
 
-  const say = (text: string | undefined): void => {
+  const say = (text: string): void => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
     speechSynthesis.speak(utterance);

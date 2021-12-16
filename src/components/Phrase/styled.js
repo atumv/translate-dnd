@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Phrase = styled.h1`
+const StyledPhrase = styled.h1`
   color: #333333;
   font-weight: 300;
   font-size: 3rem;
@@ -15,4 +15,4 @@ const Phrase = styled.h1`
   }
 `;
 
-export default Phrase;
+export default StyledPhrase;

@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 import { fadeIn } from "react-animations";
 
@@ -13,13 +12,4 @@ const StyledMsg = styled.p`
   animation: 1s ${fadeInAnimation};
 `;
 
-type MsgProps = {
-  color: string;
-  children: React.ReactNode;
-};
-
-const Msg: React.FC<MsgProps> = ({ color, children }) => (
-  <StyledMsg color={color}>{children}</StyledMsg>
-);
-
-export default Msg;
+export default StyledMsg;

@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 import { slideInRight } from "react-animations";
 
@@ -20,16 +19,4 @@ const StyledWord = styled.span`
   animation: 1s ${slideInRightAnimation};
 `;
 
-type WordProps = {
-  id: string;
-  draggable: boolean;
-  children: React.ReactNode;
-};
-
-const Word: React.FC<WordProps> = ({ id, draggable, children }) => (
-  <StyledWord className="word" id={id} draggable={draggable}>
-    {children}
-  </StyledWord>
-);
-
-export default Word;
+export default StyledWord;

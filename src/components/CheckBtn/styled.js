@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledCheckBtn = styled.button`
@@ -19,12 +18,4 @@ const StyledCheckBtn = styled.button`
   }
 `;
 
-type CheckBtnProps = {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-};
-
-const CheckBtn: React.FC<CheckBtnProps> = ({ onClick }) => (
-  <StyledCheckBtn onClick={onClick}>Проверить</StyledCheckBtn>
-);
-
-export default CheckBtn;
+export default StyledCheckBtn;

@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
-    "lintfix": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx --fix ",
+    "format": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx --fix ",
     "dev": "webpack serve --mode development --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
     "deploy": "gh-pages -d build",

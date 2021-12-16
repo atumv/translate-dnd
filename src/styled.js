@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const App = styled.div`
+const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,4 +8,4 @@ const App = styled.div`
   padding: 0 1rem;
 `;
 
-export default App;
+export default StyledApp;

@@ -12,7 +12,7 @@ import Msg from "./components/Msg/Msg";
 import StyledApp from "./styled";
 import "./styles/style.css";
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   const [phrase, setPhrase] = useState<string>("");
   const [translation, setTranslation] = useState<string>("");
   const [answer, setAnswer] = useState<string>("");
@@ -45,20 +45,19 @@ const App:React.FC = () => {
     if (e.target.classList.contains("word-list")) {
       const emptyLi = e.target.querySelector("li:empty");
       emptyLi.append(document.getElementById(data));
-      
+
       if (!emptyLi.classList.contains(emptyLi.firstElementChild.id)) {
-        setTimeout(() => {        
+        setTimeout(() => {
           const sameClassLi = e.target.querySelector(
             `li._${emptyLi.firstElementChild.id}`
           );
           sameClassLi.append(emptyLi.firstElementChild);
         }, 1000);
       }
-      
     } else if (e.target.classList.contains("list-item")) {
       e.target.append(document.getElementById(data));
       const word = e.target.querySelector(".word");
-      
+
       if (!e.target.classList.contains(word.id)) {
         setTimeout(() => {
           const sameClassLi = e.target.parentNode.querySelector(
@@ -67,7 +66,6 @@ const App:React.FC = () => {
           sameClassLi.append(word);
         }, 1000);
       }
-      
     } else if (e.target.classList.contains("answer-field")) {
       e.target.append(document.getElementById(data));
     }
@@ -121,7 +119,9 @@ const App:React.FC = () => {
               id={i.toString()}
               key={i.toString()}
             >
-              <Word id={i.toString()} draggable={true}>{word}</Word>
+              <Word id={i.toString()} draggable={true}>
+                {word}
+              </Word>
             </ListItem>
           ))}
         </WordList>

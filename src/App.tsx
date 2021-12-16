@@ -20,7 +20,7 @@ const StyledApp = styled.div`
   padding: 0 1rem;
 `;
 
-const App = () => {
+const App:React.FC = () => {
   const [phrase, setPhrase] = useState<string>("");
   const [translation, setTranslation] = useState<string>("");
   const [answer, setAnswer] = useState<string>("");

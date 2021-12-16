@@ -23,7 +23,7 @@ type CheckBtnProps = {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const CheckBtn = ({ onClick }: CheckBtnProps) => (
+const CheckBtn: React.FC<CheckBtnProps> = ({ onClick }) => (
   <StyledCheckBtn onClick={onClick}>Проверить</StyledCheckBtn>
 );
 

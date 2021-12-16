@@ -26,7 +26,7 @@ type WordProps = {
   children: React.ReactNode;
 };
 
-const Word = ({ id, draggable, children }: WordProps) => (
+const Word: React.FC<WordProps> = ({ id, draggable, children }) => (
   <StyledWord className="word" id={id} draggable={draggable}>
     {children}
   </StyledWord>

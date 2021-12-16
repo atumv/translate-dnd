@@ -12,7 +12,7 @@ type ListenBtnProps = {
   onClick: () => void;
 };
 
-const ListenBtn = ({ onClick }: ListenBtnProps) => (
+const ListenBtn: React.FC<ListenBtnProps> = ({ onClick }) => (
   <StyledListenBtn onClick={onClick}>📢</StyledListenBtn>
 );
 

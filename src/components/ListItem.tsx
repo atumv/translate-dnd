@@ -19,13 +19,13 @@ type ListItemProps = {
   children: React.ReactNode;
 };
 
-const ListItem = ({
+const ListItem: React.FC<ListItemProps> = ({
   id,
   onDragStart,
   onDragOver,
   onDrop,
   children,
-}: ListItemProps) => (
+}) => (
   <StyledListItem
     className={`_${id} list-item`}
     onDragStart={onDragStart}

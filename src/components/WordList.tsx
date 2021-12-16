@@ -19,7 +19,7 @@ type WordListProps = {
   children: React.ReactNode;
 };
 
-const WordList = ({ onDragOver, onDrop, children }: WordListProps) => (
+const WordList: React.FC<WordListProps> = ({ onDragOver, onDrop, children }) => (
   <StyledWordList className="word-list" onDragOver={onDragOver} onDrop={onDrop}>
     {children}
   </StyledWordList>

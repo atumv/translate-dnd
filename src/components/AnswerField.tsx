@@ -18,7 +18,7 @@ type AnswerFieldProps = {
   onDrop: (e: React.DragEvent<HTMLDivElement>) => void;
 };
 
-const AnswerField = ({ onDragStart, onDragOver, onDrop }: AnswerFieldProps) => (
+const AnswerField: React.FC<AnswerFieldProps> = ({ onDragStart, onDragOver, onDrop }) => (
   <StyledAnswerField
     className="answer-field"
     onDragStart={onDragStart}

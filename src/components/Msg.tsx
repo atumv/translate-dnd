@@ -18,7 +18,7 @@ type MsgProps = {
   children: React.ReactNode;
 };
 
-const Msg = ({ color, children }: MsgProps) => (
+const Msg: React.FC<MsgProps> = ({ color, children }) => (
   <StyledMsg color={color}>{children}</StyledMsg>
 );
 

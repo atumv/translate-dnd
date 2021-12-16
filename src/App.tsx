@@ -21,11 +21,11 @@ const StyledApp = styled.div`
 `;
 
 const App = () => {
-  const [phrase, setPhrase] = useState<string | undefined>(undefined);
-  const [translation, setTranslation] = useState<string | undefined>(undefined);
-  const [answer, setAnswer] = useState<string | undefined>(undefined);
-  const [correctAnswer, setCorrectAnswer] = useState<string | undefined>(undefined);
-  const [isCorrect, setIsCorrect] = useState<boolean | undefined>(undefined);
+  const [phrase, setPhrase] = useState<string>("");
+  const [translation, setTranslation] = useState<string>("");
+  const [answer, setAnswer] = useState<string>("");
+  const [correctAnswer, setCorrectAnswer] = useState<string>("");
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [words, setWords] = useState<Array<string> | []>([]);
 
   const getPhrase = async (url: string) => {
@@ -137,7 +137,7 @@ const App = () => {
 
       {phrase && <CheckBtn onClick={checkAnswer} />}
 
-      {isCorrect === undefined && <Msg color="transparent">&nbsp;</Msg>}
+      {isCorrect === null && <Msg color="transparent">&nbsp;</Msg>}
       {isCorrect === true && <Msg color="#2d962d">Правильно ✔️</Msg>}
       {isCorrect === false && <Msg color="#8d120e">Неверно ✖️</Msg>}
     </StyledApp>

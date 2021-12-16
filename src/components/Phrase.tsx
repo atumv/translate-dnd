@@ -5,7 +5,7 @@ type PhraseProps = {
   children: React.ReactNode;
 };
 
-const Phrase: React.FC<PhraseProps> = ({children}) => (
+const Phrase: React.FC<PhraseProps> = ({ children }) => (
   <StyledPhrase>{children}</StyledPhrase>
 );
 

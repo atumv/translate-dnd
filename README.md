@@ -24,6 +24,6 @@ Server is running at http://localhost:9000/.
 
 ## Shortcut
 
-```
+```sh
 git clone https://github.com/atumv/translate-dnd.git && cd translate-dnd && npm i && npm run start
 ```

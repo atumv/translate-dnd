@@ -23,7 +23,6 @@ const App: React.FC = () => {
   const getPhrase = async (url: string) => {
     const response = await fetch(url);
     const data = await response.json();
-
     setPhrase(data.text);
     setTranslation(data.translation);
     setCorrectAnswer(data.correctAnswer);

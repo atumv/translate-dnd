@@ -123,7 +123,7 @@ const App: React.FC = () => {
         </WordList>
       )}
       {phrase && <CheckBtn onClick={checkAnswer} />}
-      <Msg isCorrect={isCorrect} />
+      {phrase && <Msg isCorrect={isCorrect} />}
       <GlobalStyles />
     </StyledApp>
   );

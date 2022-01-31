@@ -15,6 +15,10 @@ export const Msg: React.FC<MsgProps> = ({ isCorrect }) => (
         : '#8d120e'
     }
   >
-    {isCorrect ? 'Правильно ✔️' : 'Неверно ✖️'}
+    {isCorrect === null
+      ? '&npsb;'
+      : isCorrect === true
+      ? 'Правильно ✔️'
+      : 'Неверно ✖️'}
   </StyledMsg>
 );

@@ -1,12 +1,10 @@
-import React from "react";
-import StyledListenBtn from "../styles/StyledListenBtn";
+import React from 'react';
+import StyledListenBtn from '../styles/StyledListenBtn';
 
-type ListenBtnProps = {
+interface ListenBtnProps {
   onClick: () => void;
-};
+}
 
-const ListenBtn: React.FC<ListenBtnProps> = ({ onClick }) => (
+export const ListenBtn: React.FC<ListenBtnProps> = ({ onClick }) => (
   <StyledListenBtn onClick={onClick}>📢</StyledListenBtn>
 );
-
-export default ListenBtn;

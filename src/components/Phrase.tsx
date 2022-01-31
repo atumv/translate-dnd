@@ -1,12 +1,10 @@
-import React from "react";
-import StyledPhrase from "../styles/StyledPhrase";
+import React from 'react';
+import StyledPhrase from '../styles/StyledPhrase';
 
-type PhraseProps = {
+interface PhraseProps {
   children: React.ReactNode;
-};
+}
 
-const Phrase: React.FC<PhraseProps> = ({ children }) => (
+export const Phrase: React.FC<PhraseProps> = ({ children }) => (
   <StyledPhrase>{children}</StyledPhrase>
 );
-
-export default Phrase;

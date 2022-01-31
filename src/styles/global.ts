@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   *,
@@ -21,6 +21,6 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
+    background: #fff;
   }
 `;

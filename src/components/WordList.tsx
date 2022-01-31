@@ -1,13 +1,13 @@
-import React from "react";
-import StyledWordList from "../styles/StyledWordList";
+import React from 'react';
+import StyledWordList from '../styles/StyledWordList';
 
-type WordListProps = {
+interface WordListProps {
   onDragOver: (e: React.DragEvent<HTMLUListElement>) => void;
   onDrop: (e: React.DragEvent<HTMLUListElement>) => void;
   children: React.ReactNode;
-};
+}
 
-const WordList: React.FC<WordListProps> = ({
+export const WordList: React.FC<WordListProps> = ({
   onDragOver,
   onDrop,
   children,
@@ -16,5 +16,3 @@ const WordList: React.FC<WordListProps> = ({
     {children}
   </StyledWordList>
 );
-
-export default WordList;

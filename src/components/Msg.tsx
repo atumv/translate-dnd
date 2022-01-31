@@ -1,13 +1,20 @@
-import React from "react";
-import StyledMsg from "../styles/StyledMsg";
+import React from 'react';
+import StyledMsg from '../styles/StyledMsg';
 
-type MsgProps = {
-  color: string;
-  children: React.ReactNode;
-};
+interface MsgProps {
+  isCorrect: boolean | null;
+}
 
-const Msg: React.FC<MsgProps> = ({ color, children }) => (
-  <StyledMsg color={color}>{children}</StyledMsg>
+export const Msg: React.FC<MsgProps> = ({ isCorrect }) => (
+  <StyledMsg
+    color={
+      isCorrect === null
+        ? 'transparent'
+        : isCorrect === true
+        ? '#2d962d'
+        : '#8d120e'
+    }
+  >
+    {isCorrect ? 'Правильно ✔️' : 'Неверно ✖️'}
+  </StyledMsg>
 );
-
-export default Msg;

@@ -1,12 +1,10 @@
-import React from "react";
-import StyledCheckBtn from "../styles/StyledCheckBtn";
+import React from 'react';
+import StyledCheckBtn from '../styles/StyledCheckBtn';
 
-type CheckBtnProps = {
+interface CheckBtnProps {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-};
+}
 
-const CheckBtn: React.FC<CheckBtnProps> = ({ onClick }) => (
+export const CheckBtn: React.FC<CheckBtnProps> = ({ onClick }) => (
   <StyledCheckBtn onClick={onClick}>Проверить</StyledCheckBtn>
 );
-
-export default CheckBtn;

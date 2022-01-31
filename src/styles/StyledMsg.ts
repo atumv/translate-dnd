@@ -9,6 +9,7 @@ const StyledMsg = styled.p`
   font-size: 1rem;
   font-weight: 300;
   margin-top: 1.5rem;
+  line-height: 1.2;
   animation: 1s ${fadeInAnimation};
 `;
 

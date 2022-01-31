@@ -1,13 +1,13 @@
-import React from "react";
-import StyledAnswerField from "../styles/StyledAnswerField";
+import React from 'react';
+import StyledAnswerField from '../styles/StyledAnswerField';
 
-type AnswerFieldProps = {
+interface AnswerFieldProps {
   onDragStart: (e: React.DragEvent<HTMLDivElement>) => void;
   onDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
   onDrop: (e: React.DragEvent<HTMLDivElement>) => void;
-};
+}
 
-const AnswerField: React.FC<AnswerFieldProps> = ({
+export const AnswerField: React.FC<AnswerFieldProps> = ({
   onDragStart,
   onDragOver,
   onDrop,
@@ -19,5 +19,3 @@ const AnswerField: React.FC<AnswerFieldProps> = ({
     onDrop={onDrop}
   />
 );
-
-export default AnswerField;

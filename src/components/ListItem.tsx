@@ -1,15 +1,15 @@
-import React from "react";
-import StyledListItem from "../styles/StyledListItem";
+import React from 'react';
+import StyledListItem from '../styles/StyledListItem';
 
-type ListItemProps = {
+interface ListItemProps {
   onDragStart: (e: React.DragEvent<HTMLSpanElement>) => void;
   onDragOver: (e: React.DragEvent<HTMLSpanElement>) => void;
   onDrop: (e: React.DragEvent<HTMLSpanElement>) => void;
   id: string;
   children: React.ReactNode;
-};
+}
 
-const ListItem: React.FC<ListItemProps> = ({
+export const ListItem: React.FC<ListItemProps> = ({
   id,
   onDragStart,
   onDragOver,
@@ -25,5 +25,3 @@ const ListItem: React.FC<ListItemProps> = ({
     {children}
   </StyledListItem>
 );
-
-export default ListItem;

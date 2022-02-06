@@ -3,6 +3,7 @@
 ![example](/public/example.gif)
 
 Pretty simple drag and drop translate application built with React & TypeScript.
+
 The project is based on [`Create React App`](https://github.com/facebook/create-react-app).
 
 You can see the live demo [here](https://atumv.github.io/translate-dnd).

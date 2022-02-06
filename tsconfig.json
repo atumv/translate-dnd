@@ -1,29 +1,21 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "rootDir": "./",
-    "outDir": "./dist",
-    "module": "esnext",
-    "target": "es6",
-    "lib": ["es6", "dom", "dom.iterable"],
-    "sourceMap": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "typeRoots": ["./node_modules/@types", "./src/@types"],
-    "paths": {
-      "@src/*": ["src/*"],
-      "@components/*": ["src/components/*"]
-    },
-    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "importsNotUsedAsValues": "preserve",
-    "incremental": true
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "exclude": ["**/node_modules", "**/.*/"]
+  "include": ["src", "src/app.d.ts"]
 }

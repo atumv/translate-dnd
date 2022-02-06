@@ -3,6 +3,7 @@
 ![example](/public/example.gif)
 
 Pretty simple drag and drop translate application built with React & TypeScript.
+The project is based on [`Create React App`](https://github.com/facebook/create-react-app).
 
 You can see the live demo [here](https://atumv.github.io/translate-dnd).
 
@@ -13,7 +14,6 @@ You can see the live demo [here](https://atumv.github.io/translate-dnd).
 - [`styled-components`](https://www.npmjs.com/package/styled-components)
 - [`react-animations`](https://www.npmjs.com/package/react-animations)
 - [`json-server`](https://www.npmjs.com/package/json-server)
-- [`webpack`](https://www.npmjs.com/package/webpack)
 
 ## Installation and running
 

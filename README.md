@@ -23,7 +23,7 @@ You can see the live demo [here](https://atumv.github.io/translate-dnd).
 3. Install dependencies: `npm i`
 
 Then you can start the app with `npm run start`.
-Server is running at http://localhost:9000/.
+Server is running at http://localhost:3000/.
 
 ## Shortcut
 

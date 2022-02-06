@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledMsg from '../styles/StyledMsg';
+import StyledMsg from 'styles/StyledMsg';
 
 interface MsgProps {
   isCorrect: boolean | null;

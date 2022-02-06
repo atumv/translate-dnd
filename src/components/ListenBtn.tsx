@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledListenBtn from '../styles/StyledListenBtn';
+import StyledListenBtn from 'styles/StyledListenBtn';
 
 interface ListenBtnProps {
   onClick: () => void;

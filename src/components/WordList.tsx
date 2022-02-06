@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledWordList from '../styles/StyledWordList';
+import StyledWordList from 'styles/StyledWordList';
 
 interface WordListProps {
   onDragOver: (e: React.DragEvent<HTMLUListElement>) => void;

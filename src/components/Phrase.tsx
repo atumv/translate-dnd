@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledPhrase from '../styles/StyledPhrase';
+import StyledPhrase from 'styles/StyledPhrase';
 
 interface PhraseProps {
   children: React.ReactNode;

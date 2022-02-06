@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-import { Phrase } from './components/Phrase';
-import { ListenBtn } from './components/ListenBtn';
-import { AnswerField } from './components/AnswerField';
-import { WordList } from './components/WordList';
-import { ListItem } from './components/ListItem';
-import { Word } from './components/Word';
-import { CheckBtn } from './components/CheckBtn';
-import { Msg } from './components/Msg';
+import { Phrase } from 'components/Phrase';
+import { ListenBtn } from 'components/ListenBtn';
+import { AnswerField } from 'components/AnswerField';
+import { WordList } from 'components/WordList';
+import { ListItem } from 'components/ListItem';
+import { Word } from 'components/Word';
+import { CheckBtn } from 'components/CheckBtn';
+import { Msg } from 'components/Msg';
 
-import GlobalStyles from './styles/global';
-import StyledApp from './styles/StyledApp';
+import GlobalStyles from 'styles/global';
+import StyledApp from 'styles/StyledApp';
 
 const App: React.FC = () => {
   const [phrase, setPhrase] = useState<string>('');

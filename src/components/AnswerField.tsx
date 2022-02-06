@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledAnswerField from '../styles/StyledAnswerField';
+import StyledAnswerField from 'styles/StyledAnswerField';
 
 interface AnswerFieldProps {
   onDragStart: (e: React.DragEvent<HTMLDivElement>) => void;

@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledCheckBtn from '../styles/StyledCheckBtn';
+import StyledCheckBtn from 'styles/StyledCheckBtn';
 
 interface CheckBtnProps {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;

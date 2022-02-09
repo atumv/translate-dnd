@@ -28,5 +28,5 @@ Server is running at http://localhost:3000/.
 ## Shortcut
 
 ```sh
-git clone https://github.com/atumv/translate-dnd.git && cd translate-dnd && npm i && npm run start
+git clone https://github.com/atumv/translate-dnd.git && cd translate-dnd && npm i && npm start
 ```
